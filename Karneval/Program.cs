@@ -38,7 +38,7 @@ namespace Karneval
                 foreach (var url in Urls)
                 {
                     var content = GetContent(url);
-                    if (content.Contains("eventim") || content.Contains("kaufen"))
+                    if (content.Contains("Restkarten") || content.Contains("kaufen"))
                         SendToPushoverApi(url);
                 }
             }
