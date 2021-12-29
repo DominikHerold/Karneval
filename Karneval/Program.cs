@@ -22,6 +22,9 @@ namespace Karneval
             PushOverUser = configuration["PushOverUser"];
             Urls = configuration["Urls"].Split(',').Select(x => x.Trim()).ToArray();
 
+            Console.WriteLine("Start");
+            SendToPushoverApi("Start");
+
             Timer = new Timer((int)TimeSpan.FromHours(5).TotalMilliseconds, false);
             Timer.Elapsed += CheckUrls;
 
